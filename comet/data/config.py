@@ -1,7 +1,8 @@
 import json
+import torch
 from comet.utils import DD
 
-device = "cuda"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 save = False
 test_save = False
